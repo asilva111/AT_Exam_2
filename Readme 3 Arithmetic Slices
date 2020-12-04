@@ -1,3 +1,4 @@
+Arithmetic Slices
 3.1 - The common behavior that we can observe is that we have a sequence of numbers, we check if that sequence
 is a valid slice and then we can add 1 more number to that slice. Since
 we have already computed if the slice is valid or not, we just need to check
