@@ -1,1 +1,29 @@
-6
+Integer Break
+6.1 For this problem we can arrive at a solution by working from 0 to the 
+desired integer n. If we compute the integer break this way, we calculate 
+intBreak(0) then intBreak(1), then intBreak(2) = intBreak(1) + intBreak(1)
+and so on. We basically populate the list building on previous computations.
+
+Now that we have these values we can start thinking on how to use this list.
+For this we need to look at how the integer n can be broken down. If we take n = 8 for example:
+
+7 + 1
+6 + 2
+5 + 3
+4 + 4
+...
+1 + 7
+
+now it is just a matter of using the list we populated and look at which sum gives us
+the greatest sum by calling intBreak(7) + intBreak(1), intBreak(6) + intBreak(2), and so on.
+
+To be more clear, the recursive nature of the problem is that of taking n and breaking
+it down into sum components, which we can see how they behave when multiplied by calling
+function with even smaller components.
+
+6.2 - Here a list or dictionary is enough to store the solutions to smaller subproblems.
+
+i -> 0 to n   		 [0,1,2,3,4,5,6,7, 8]
+where intBreak(i) -> [0,1,1,2,4,6,9,12,18]
+
+then we just call the numbers of the sums with the method and pick the greatest.
