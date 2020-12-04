@@ -1,0 +1,16 @@
+3.1 - The common behavior that we can observe is that we have a sequence of numbers, we check if that sequence
+is a valid slice and then we can add 1 more number to that slice. Since
+we have already computed if the slice is valid or not, we just need to check
+that the slice with the next number is valid, that is if the difference between
+new number and previous is the same.
+
+If the last step is valid, we can add another number and check again.
+If at any point we have an invalid slice, we can reset the streak
+, mark the begining of the new slice and repeat what we have stated.
+
+
+3.2 - In this case we don't need to store solutions in a data structure.
+Since we are keeping track of count, a variable to count and another for the
+difference between the last two numbers will sufice. We will traverse the
+whole input once while counting and resseting if the current slice is valid.
+
