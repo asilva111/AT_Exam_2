@@ -1,0 +1,22 @@
+Palindrome Substrings
+2.1 - In this problem we have a string and we must check if all possible 
+substrings are palindrome. When we solve a couple of iterations, we 
+will realize that we get to a point where we are doing the same work
+and that this can be avoided with Dynamic Programing. For example
+when a substring on length 4 is slipt into 2 substrings of length 3
+and we further split those ones into length 2, we will end with 2 
+substrings of lenght 2 that are the same and represent the same substring.
+
+2.2 - I first thought how to approach this problem in the same way that 
+I thought about problem #1, by keeping track of the substrings we have 
+"visited" already and in this case store if they are palindromes or not
+so we can count them and return the total. I will have a 2d List of n x n
+size where n = length of the given string. If the substring is 1 char long
+then it is palindrome and we up the count, if it is 2 char and both char are
+the same we also increase the count, if it is length 3 and above we can call
+a heleper function that checks if a given string is palindrome by looking at
+the edges and moving toward the middle. 
+
+Now that we have the different possibilities of the substrings, we just 
+need to create a sliding window of different sizes that before it checks substrings
+it checks if the current substring has been already checked.
