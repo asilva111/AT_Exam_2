@@ -4,7 +4,7 @@ Created on Wed Dec  2 00:03:58 2020
 
 @author: andre
 """
-class Solution:
+class Solution: #I only have the solution for #1 here
     def FallingPath(self, A):
         paths = [[0] * len(A[i]) for i in range(len(A))]
         
